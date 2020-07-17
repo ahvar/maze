@@ -3,6 +3,7 @@
 import map
 from maze.maze import Maze
 from utils import map_utils
+import datetime
 
 
 class MazeGame:
@@ -23,9 +24,11 @@ class MazeGame:
 
 
 def main():
-    timer = map_utils.Timer()
-    print(f'Print start time: {timer.start_time}')
-    print(f'Print timer:  {timer}')
+    player = 'Arthur'
+    now = datetime.datetime.today()
+    print(f'{player} is entering the room at {str(now)}')
+    timer = map_utils.Timer(now)
+
 
 
 if __name__ == "__main__":
